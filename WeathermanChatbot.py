@@ -79,9 +79,13 @@ def keywords(keyword):
         # searches for if valid city
 
         # puts the cities into a list (oneword cities and two word cities)
-    onewordcities = open("citiesoftheworld.txt", "r").read().strip().lower()
+    onewordcities = (
+        open("citiesoftheworld.txt", "r", encoding="utf8").read().strip().lower()
+    )
     citieslist = list(onewordcities.split("\n"))
-    twowordcities = open("twonamedcities.txt", "r").read().lower().strip()
+    twowordcities = (
+        open("twonamedcities.txt", "r", encoding="utf8").read().lower().strip()
+    )
     twowcitieslist = list(twowordcities.split("\n"))
 
     # turns user input words into list (for city checking)
